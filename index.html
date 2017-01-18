@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>correctiv superbugs example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css" media="screen" title="normalize" charset="utf-8">
+  <link rel="stylesheet" href="./style.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+  <header class="header">
+    <section class="header__inner">
+      <h3>d3-playbooks-maps</h3>
+      <h1>correctiv superbugs maps</h1>
+      <p>See original publication at <a href="https://correctiv.org/en/investigations/superbugs/atlas/superbug-atlas-e-coli-cephalosporins/">https://correctiv.org/superbugs</a></p>
+      <p>This example demonstrates how to use <a href="https://github.com/simonwoerpel/d3-playbooks-maps"><code>d3-playbooks-maps</code></a> to render multiple responsive static maps efficiently. See source at <a href="./superbugs.js"><code>superbugs.js</code></a> for details.</p>
+
+      <h2>change colors</h2>
+      <p>This shows how to manipulate the rendered maps once they are created, for example change colors afterwards. <a href="./superbugs.js">See source for implementation details</a>.</p>
+      <p>Click on one of the buttons to update the <code>colorScheme</code>. The schemes are all from <a href="https://github.com/d3/d3-scale-chromatic"><code>d3-scale-chromatic</code></a>.</p>
+      <section class="colorswitcher"></section>
+    </section>
+  </header>
+
+  <main class="main"></main>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src="./lib/d3-playbooks.maps.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./superbugs.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
