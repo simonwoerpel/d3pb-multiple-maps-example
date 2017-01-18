@@ -1,4 +1,4 @@
-// transpile to es2015:
+// transpile to es5:
 // install babel, babel-preset-2015 and (optionally) uglifyjs, then:
 // `babel superbugs.js | uglifyjs > superbugs.min.js`
 
