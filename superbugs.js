@@ -12,7 +12,6 @@ d3.json('./europe.topo.json', d => {
   // https://github.com/simonwoerpel/load-spreadsheets-js
   loadSpreadsheet('1dzbZkuUNCQ5OblONIygIXPVfK0UcizlaHS7p6Kg9MMo', 1, d => {
     const data = d
-    const columns = Object.keys(d[0])
 
     // set defaults for each map, including geojson & csvdata
     d3.playbooks.choroplethMap.defaults({
@@ -79,8 +78,8 @@ d3.json('./europe.topo.json', d => {
       return map
     }
 
-    // render map for each column (except `id`)
-    const MAPS = columns.filter(c => c !== 'id').map(c => renderMap(c))
+    // render map for each column
+    const MAPS = Object.keys(META_DATA).map(c => renderMap(c))
 
     // add colorScheme switcher buttons
     const schemeKeys = Object.keys(COLOR_SCHEMES)
