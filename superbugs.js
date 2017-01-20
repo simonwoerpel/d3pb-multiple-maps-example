@@ -8,9 +8,11 @@ d3.json('./europe.topo.json', d => {
   // convert topojson to geojson
   const geoData = topojson.feature(d, d.objects.europe_clipped)
 
-  d3.csv('./superbugs.csv', d => {
+
+  // https://github.com/simonwoerpel/load-spreadsheets-js
+  loadSpreadsheet('1dzbZkuUNCQ5OblONIygIXPVfK0UcizlaHS7p6Kg9MMo', 1, d => {
     const data = d
-    const columns = d.columns
+    const columns = Object.keys(d[0])
 
     // set defaults for each map, including geojson & csvdata
     d3.playbooks.choroplethMap.defaults({
